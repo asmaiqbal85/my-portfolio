@@ -8,3 +8,9 @@
     background-color: #000;
   }
 }
+
+@layer components {
+  .menuLink {
+    @apply cursor-pointer hover:text-[#c5c5];
+  }
+}
