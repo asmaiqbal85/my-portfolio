@@ -11,7 +11,7 @@ function ContactMe() {
     const [errorMessage, setErrorMessage] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
-    const handleChange = (e) => {
+    const handleChange = (e:any) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
@@ -19,7 +19,7 @@ function ContactMe() {
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault();
 
         // Basic validation
@@ -78,7 +78,7 @@ function ContactMe() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full p-3 border border-gray-300 rounded focus:outline-none text-black focus:ring focus:ring-blue-200"
-                        rows="5"
+                        rows={5}
                         required
                     />
                 </div>
