@@ -5,7 +5,7 @@ const About = () => {
         <section id="about" className="container mx-auto p-8 mt-10 text-white bg-gray-900 shadow-2xl rounded-2xl max-w-3xl transition-transform transform hover:scale-105 duration-300">
             <h2 className="text-5xl font-extrabold mb-6 text-blue-400">About Me</h2>
             <p className="text-lg leading-relaxed mb-6 text-gray-300">
-                Hello! I'm a passionate developer with experience in building web applications
+                Hello! I&apos;m a passionate developer with experience in building web applications
                 using modern technologies. I enjoy creating intuitive and dynamic user experiences,
                 and I thrive on solving complex problems.
             </p>

@@ -1,6 +1,6 @@
-"use client"
-import React, { useState } from 'react';
-import { MdMessage } from "react-icons/md";
+"use client";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+
 function ContactMe() {
     const [formData, setFormData] = useState({
         name: '',
@@ -11,7 +11,7 @@ function ContactMe() {
     const [errorMessage, setErrorMessage] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
-    const handleChange = (e:any) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
@@ -19,7 +19,7 @@ function ContactMe() {
         });
     };
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         // Basic validation

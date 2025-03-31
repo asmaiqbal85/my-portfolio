@@ -1,7 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 
-const data = [
+interface Project {
+  id: number;
+  title: string;
+  desc: string;
+  img: string;
+  tags: string[];
+}
+
+const data: Project[] = [
   {
     id: 1,
     title: "Todo List",
@@ -67,7 +75,7 @@ const data = [
   },
 ];
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
     <div id="projects" className="container mx-auto p-8">
       <h1 className="text-4xl font-extrabold text-center mb-10 text-blue-500">My Projects</h1>
@@ -78,9 +86,13 @@ function Projects() {
       </div>
     </div>
   );
+};
+
+interface ProjectCardProps {
+  project: Project;
 }
 
-function ProjectCard({ project }:any) {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-gray-900 text-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
       <Image src={project.img} alt={project.title} width={400} height={250} className="w-full object-cover" />
@@ -88,13 +100,13 @@ function ProjectCard({ project }:any) {
         <h2 className="text-2xl font-bold text-blue-400 mb-2">{project.title}</h2>
         <p className="text-gray-300 mb-4">{project.desc}</p>
         <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag:any, index:any) => (
+          {project.tags.map((tag, index) => (
             <span key={index} className="bg-blue-600 text-white px-3 py-1 text-xs rounded-full">{tag}</span>
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Projects;

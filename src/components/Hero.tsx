@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10 text-center lg:text-left">
           {/* Name in One Line */}
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-wide">
-            I'm <span className="text-yellow-400">Asma Iqbal</span>
+            I&apos;m <span className="text-yellow-400">Asma Iqbal</span>
           </h1>
 
           {/* Profession / Specialization */}
@@ -64,4 +64,3 @@ export default function Hero() {
     </div>
   );
 }
-
