@@ -6,12 +6,8 @@ const Footer = () => {
         <footer className="bg-blue-800 text-white py-6">
             <div className="container mx-auto flex flex-col items-center">
                 <div className="flex gap-4 mb-4">
-                    <a href="https://facebook.com/yourusername" className="hover:text-blue-600">
-                        <FaFacebookF className="text-xl" />
-                    </a>
-                    <a href="https://twitter.com/yourusername" className="hover:text-blue-400">
-                        <FaTwitter className="text-xl" />
-                    </a>
+                    
+                    
                     <a href="https://www.linkedin.com/in/asma-iqbal-9b85962bb/" className="hover:text-blue-700">
                         <FaLinkedin className="text-xl" />
                     </a>
